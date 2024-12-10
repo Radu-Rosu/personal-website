@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: serif, sans-serif, monospace;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Main Content Area */
+.main-content {
+  background-color: #88abce; /* Light gray background */
+  color: #333; /* Dark gray text */
+  padding: 40px 20px;
+  min-height: calc(
+    100vh - 140px
+  ); /* Ensures the region takes remaining space */
+}
+
+.footer {
+  background-color: #333; /* Culoare de fundal */
+  color: white; /* Text alb */
+  text-align: center; /* Aliniere centrală */
+  padding: 20px 0; /* Spațiere sus și jos */
+  font-size: 14px; /* Dimensiune text */
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+/* Burger Menu */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9aa4d0;
+  padding: 10px 20px;
+}
+
+nav a {
+  color: rgb(27, 30, 35);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px; /* Spațiere între linkuri */
+  text-decoration: none; /* Eliminare subliniere */
+}
+
+.social-icon {
+  width: 30px; /* Dimensiunea logo-ului */
+  height: 30px;
+  transition: transform 0.3s; /* Efect de hover */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Mărește ușor logo-ul */
+}
+
+.logo {
+  position: fixed; /* Positions the logo relative to the page */
+  top: 10px; /* Adjust distance from the top */
+  left: 10px; /* Adjust distance from the left */
+  width: 100px; /* Adjust logo width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text-image-container {
+  display: flex; /* Enables inline alignment */
+  justify-content: flex-end; /* Pushes content to the right */
+  align-items: center; /* Vertically centers the text and image */
+}
+
+.inline-text {
+  margin-right: 10px; /* Adds space between text and image */
+  font-size: 16px; /* Optional: Adjust font size */
+  color: #333; /* Optional: Set text color */
+}
+
+.inline-image {
+  width: 100px; /* Adjust image width */
+  height: auto; /* Maintain image aspect ratio */
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  display: block; /* Ensures the entire card is clickable */
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits the text color */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer; /* Makes it clear the card is clickable */
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-5px); /* Slightly lifts the card */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background-color: #f4f4f4;
+}
+
+.card:focus {
+  outline: 2px solid #007bff; /* Adds a focus ring */
+  outline-offset: 2px;
+}
+
+/* Responsive Styles */
+
+/* Large Devices (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .nav-links {
+    display: flex; /* Always show links on large screens */
+    flex-direction: row; /* Horizontal layout */
+    position: static; /* No absolute positioning */
+    background-color: transparent; /* No background */
+    padding: 0; /* Remove extra padding */
+    box-shadow: none; /* Remove box shadow */
+  }
+
+  .burger-menu {
+    display: none; /* Hide burger menu on large screens */
+  }
+}
+
+/* Medium Devices (min-width: 950px and max-width: 1199px) */
+@media (min-width: 950px) and (max-width: 1199px) {
+  .nav-links {
+    display: flex; /* Show links */
+    flex-direction: row; /* Horizontal layout */
+    position: static; /* No absolute positioning */
+    background-color: #333; /* Optional: Add slight background for readability */
+    padding: 5px 10px; /* Moderate padding */
+    border-radius: 3px; /* Subtle rounding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .burger-menu {
+    display: none; /* Hide burger menu on medium screens */
+  }
+}
+
+/* Small devices */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .burger-menu {
+    display: flex; /* Show burger menu on small screens */
+   /*
+       position: absolute; /* Ensure it's aligned correctly */
+   /*    top: 10px; /* Adjust top spacing */
+   /*    left: 10px; /* Position the burger menu in the top-left corner */
+
+  }
+
+  .burger-menu.open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .burger-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+}
